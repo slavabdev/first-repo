@@ -43,16 +43,21 @@ for (let i = 0; i < 5; i++) {
 //Arrays
 
 let bands = ["Offspring", "Green Day", "In Extremo", "Avatar"];
-for (i = 0; i < bands.length; i++) {
-  if (bands[i] === "Green Day") {
-    continue;
+let newBands = [...bands];
+
+function listArt() {
+  for (i = 0; i < bands.length; i++) {
+    if (bands[i] === "Avatar") {
+      ava = bands.pop();
+      console.log(ava);
+    }
   }
-  console.log(bands[i]);
 }
-bant = [];
-bands.forEach((band) => {
-  if (band != "Green Day") {
-    bant.push(band);
-  }
-});
-console.log(bant);
+
+listArt();
+
+listArtists = () => {
+  newBands.forEach((band) => console.log(band));
+};
+
+listArtists();
